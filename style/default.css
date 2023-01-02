@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
+html {
+	min-height: 100%;
+}
+
 body {
+	background-image: url("../assets/papyrus-background.jpg");
 	margin: 0px;
 }
 
