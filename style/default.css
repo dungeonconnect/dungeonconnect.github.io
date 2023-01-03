@@ -1,5 +1,23 @@
 @charset "UTF-8";
 
+:root {
+	--diabled-text-color: #A2A2A2;
+	--active-text-color: #F3F3F3;
+	/* hsl values for the active color */
+	--active-color-h: 0;
+ 	--active-color-s: 0%;
+  	--active-color-l: 13%;
+  	/* the defined active color*/
+ 	--active-color: 
+ 		hsl(var(--active-color-h), var(--active-color-s), var(--active-color-l));
+ 	--darker-active-color: 
+ 		hsl(var(--active-color-h), var(--active-color-s), calc(var(--active-color-l) - 8%));
+ 	--lighter-active-color: 
+ 		hsl(var(--active-color-h), var(--active-color-s), calc(var(--active-color-l) + 13%));
+ 	/* The color of most borders and trims */
+ 	--trim-color: gold;
+}
+
 html {
 	min-height: 100%;
 }
@@ -11,22 +29,34 @@ body {
 
 div.top-flavor {
 	width: 100%;
-	height: 60px;
+	height: 63px;
 	margin: auto;
 	z-index: 2;
-	background-image: linear-gradient(to bottom right, #212121, #0D0D0D);
-	border-bottom: 3px solid gold;
+	background-image: linear-gradient(to bottom right, var(--active-color), var(--darker-active-color));
+	box-sizing: border-box;
+	border-bottom: 3px solid var(--trim-color);
 }
 
 .home-logo {
 	float: left;
 	margin-left: 30px;
-	color: #F3F3F3;
+	color: var(--active-text-color);
 	font-family: Luminari;
 	font-size: 30px;
 	text-decoration: none;
 	padding: 10px 5px 10px 5px;
 	text-shadow: 2px 2px 4px black;
+}
+
+.top-nav-right {
+	float: right;
+	color: var(--active-text-color);
+	font-family: Luminari;
+	font-size: 22px;
+	text-decoration: none;
+	padding: 15px 5px 15px 5px;
+	text-shadow: 2px 2px 4px black;
+	cursor: pointer;
 }
 
 .home-icon {
@@ -35,7 +65,16 @@ div.top-flavor {
 	width: 40px;
 	overflow: hidden;
 	padding-right: 10px;
-	filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1) drop-shadow(2px 2px 4px black);
+}
+
+.nav-icon {
+	float: left;
+	height: 24px;
+	width: 24px;
+	overflow: hidden;
+	padding: 3px 0px 3px 0px;
+	filter: brightness(0) invert(1) drop-shadow(2px 2px 4px black);
 }
 
 .margin-left {
@@ -64,7 +103,7 @@ div.top-flavor {
     top: 0;
     width: 100%;
     height: 50px;
-    background-image: linear-gradient(to bottom, #444444, #212121);
+    background-image: linear-gradient(to bottom, var(--lighter-active-color), var(--active-color));
     justify-content: center;
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
@@ -75,7 +114,7 @@ div.top-flavor {
     float: left;
     font-size: 16px;
     line-height: 20px;
-    color: #A2A2A2;
+    color: var(--diabled-text-color);
     text-align: center;
     padding: 15px 20px 15px 20px;
     text-decoration: none;
@@ -89,7 +128,7 @@ div.top-flavor {
 .nav-dropdown .nav-dropbtn {
     font-size: 16px;
     line-height: 20px;
-    color: #A2A2A2;
+    color: var(--diabled-text-color);
     text-align: center;
     padding: 15px 20px 15px 20px;
     border: none;
@@ -100,37 +139,31 @@ div.top-flavor {
 }
 
 .navbar a:hover, .nav-dropdown:hover .nav-dropbtn {
-    background: #212121;
-    color: #F3F3F3;
+    background: var(--active-color);
+    color: var(--active-text-color);
 }
 
 .nav-dropdown-content {
     display: none;
     position: absolute;
+    left: 10%;
     z-index: 999;
-    width: 350px;
-    height: 220px;
+    width: 80%;
+    height: 300px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    border-bottom: 3px solid var(--trim-color);
+    border-left: 3px solid var(--trim-color);
+    border-right: 3px solid var(--trim-color);
 }
 
-.nav-dropdown-content a {
-    background: white;
-    font-family: georgia;
-    color: #000000;
-    height: 48px;
-    line-height: 24px;
-    font-size: 16px;
-    text-align: left;
-    padding-left: 15px;
-    text-decoration: none;
-    overflow: auto;
-    float: none;
-    display: block;
-}
-
-.nav-dropdown-content a:hover {
-    background: #d4d4d4;
+.nav-dropdown-background {
+	background-color: var(--darker-active-color);
+	position: absolute;
+	opacity: .90;
+	width: 100%;
+	height: 100%;
 }
 
 .nav-dropdown:hover .nav-dropdown-content {
@@ -140,15 +173,19 @@ div.top-flavor {
 /* Use a media query to modify for phones */
 @media screen and (max-width: 767px) {
   .margin-left {
-    width: 2px;
+    width: 10px;
   }
   
   .margin-right {
-    width: 2px;
+    width: 10px;
   }
   
   .navbar {
   	display: none;
+  }
+  
+  .home-logo {
+  	margin-left: 0px;
   }
   
   

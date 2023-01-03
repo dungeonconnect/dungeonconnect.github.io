@@ -15,10 +15,20 @@
 		<a class="home-logo" href="/index.html"><img
 			src="assets/d20-logo.jpg" class="home-icon" alt="D20-logo">Dungeon
 			Connect</a>
+		<!-- Right Margin -->
+		<div class="margin-right"></div>
+		<!-- Profile Dropdown -->
+		
+		<!-- Messages -->
+		<a class="top-nav-right" href="index.html"><img src="assets/messages-icon.jpg" class="nav-icon" alt="messages"></a>
+		<!-- Notifications -->
+		<!-- Hide/Show Nav -->
+		<div class="top-nav-right" onclick="toggleNav('nav')">Toggle Nav</div>
+		<!-- Search -->
 	</div>
 	
 	<!-- Navbar for the page -->
-        <div class="navbar">
+        <div class="navbar" id="nav">
 
           <!-- Dropdown for the user's collections -->
           <div class="nav-dropdown" id="content">
@@ -37,14 +47,15 @@
 
             <!-- The drop down menu for creation tools -->
             <div class="nav-dropdown-content">
+            <div class="nav-dropdown-background"></div>
             </div>
           </div>
 
           <!-- Rules and Guides -->
-          <a href="/html/classes/mae-302/formulas/formulas.html">Rules and Guides</a>
+          <a href="/rules-and-guides/rules-home.html">Rules and Guides</a>
 
           <!-- Forums -->
-          <a href="/html/classes/mae-302/tables/tables.html">Forums</a>
+          <a href="/forums/forum-home.html">Forums</a>
           
           <!-- Dropdown for the store -->
           <div class="nav-dropdown" id="content">
@@ -62,4 +73,20 @@
       
 	<div style="background: black; height: 10000px; width: 5%"></div>
 </body>
+<script type="text/javascript">
+	function toggleNav(id) {
+		var x = document.getElementById(id);
+		const mediaQuery = window.matchMedia('(max-width: 767px)');
+		if (mediaQuery) {
+			if (x.style.display === "none") {
+				x.style.display = null;
+			} else {
+				x.style.display = "none";
+			}
+		}
+		else {
+			// Code that brings out the hidden nav bar for smaller screens
+		}
+	}
+</script>
 </html>
