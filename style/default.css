@@ -140,11 +140,11 @@ div.top-flavor {
 /* Use a media query to modify for phones */
 @media screen and (max-width: 767px) {
   .margin-left {
-    width: 10px;
+    width: 2px;
   }
   
   .margin-right {
-    width: 10px;
+    width: 2px;
   }
   
   .navbar {
