@@ -146,6 +146,12 @@ div.top-flavor {
   .margin-right {
     width: 10px;
   }
+  
+  .navbar {
+  	display: none;
+  }
+  
+  
 }
 
 /* Use a media query to modify for tablets */
