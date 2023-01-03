@@ -35,6 +35,7 @@ div.top-flavor {
 	background-image: linear-gradient(to bottom right, var(--active-color), var(--darker-active-color));
 	box-sizing: border-box;
 	border-bottom: 3px solid var(--trim-color);
+	overflow: none;
 }
 
 .home-logo {
