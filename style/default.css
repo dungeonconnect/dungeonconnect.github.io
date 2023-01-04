@@ -16,6 +16,8 @@
  		hsl(var(--active-color-h), var(--active-color-s), calc(var(--active-color-l) + 13%));
  	/* The color of most borders and trims */
  	--trim-color: gold;
+ 	--disabled-filter: invert(80%) sepia(0%) saturate(3%) hue-rotate(206deg) brightness(82%) contrast(86%);
+ 	--active-filter: invert(98%) sepia(6%) saturate(344%) hue-rotate(222deg) brightness(116%) contrast(91%);
 }
 
 html {
@@ -61,13 +63,17 @@ div.top-flavor {
 	cursor: pointer;
 }
 
+.top-nav-right:hover .nav-icon {
+	filter: var(--active-filter) drop-shadow(2px 2px 4px black);
+}
+
 .home-icon {
 	float: left;
 	height: 40px;
 	width: 40px;
 	overflow: hidden;
 	padding-right: 10px;
-	filter: brightness(0) invert(1) drop-shadow(2px 2px 4px black);
+	filter: var(--active-filter) drop-shadow(2px 2px 4px black);
 }
 
 .nav-icon {
@@ -76,7 +82,7 @@ div.top-flavor {
 	width: 24px;
 	overflow: hidden;
 	padding: 3px 0px 3px 0px;
-	filter: brightness(0) invert(1) drop-shadow(2px 2px 4px black);
+	filter: var(--disabled-filter) drop-shadow(2px 2px 4px black);
 }
 
 .margin-left {
