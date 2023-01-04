@@ -8,7 +8,7 @@
 </head>
 <body>
 	<!-- Logo and beginning of the page -->
-	<div class="sticky">
+	<div class="hud">
 	<div class="top-flavor">
 	<div class="margin-left"></div>
 		<!-- Home button -->
@@ -89,7 +89,7 @@
        </div>
       </div>
       
-	<div style="background: black; height: 10000px; width: 5%"></div>
+	<div style="background: black; height: 10000px; width: 5%; z-index: 2; position: relative;" id="1"></div>
 </body>
 <script type="text/javascript">
 	
@@ -97,14 +97,16 @@
 		var x = document.getElementById(id);
 		var y = document.getElementById(id2);
 		const notPhone = window.matchMedia('(min-width: 768px)');
-		const phone = window.matchMedia('(max-width: 767px)');
 		if (notPhone.matches) {
 			if (x.style.display === "none") {
 				x.style.display = null;
+				showNav(x);
 			} else {
-				x.style.display = "none";
+				hideNav(x);
+				sleep(220).then(() => {
+					x.style.display = "none";
+				});
 			}
-			console.log("If executed.")
 		}
 		else {
 			if (y.style.display === "none") {
@@ -113,6 +115,42 @@
 				y.style.display = "none";
 			}
 		}
+	}
+	
+	function sleep(ms) {
+		  return new Promise((resolve) => setTimeout(resolve, ms));
+		}
+	
+	function hideNav(x) {
+		const hudHide = [
+			{transform: 'translate(0px, 0px)'},
+			{transform: 'translate(0px, -5px)'},
+			{transform: 'translate(0px, -15px)'},
+			{transform: 'translate(0px, -30px)'},
+			{transform: 'translate(0px, -50px)'},
+			{transform: 'translate(0px, -50px)'}
+		];
+		const timing = {
+				  duration: 240,
+				  iterations: 1,
+				}
+		x.animate(hudHide, timing);
+	}
+	
+	function showNav(x) {
+		const hudHide = [
+			{transform: 'translate(0px, -50px)'},
+			{transform: 'translate(0px, -50px)'},
+			{transform: 'translate(0px, -45px)'},
+			{transform: 'translate(0px, -35px)'},
+			{transform: 'translate(0px, -20px)'},
+			{transform: 'translate(0px, 0px)'}
+		];
+		const timing = {
+				  duration: 240,
+				  iterations: 1,
+				}
+		x.animate(hudHide, timing);
 	}
 </script>
 </html>
