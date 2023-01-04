@@ -32,7 +32,7 @@
 
           <!-- Dropdown for the user's collections -->
           <div class="nav-dropdown" id="content">
-            <button class="nav-dropbtn">My Stuff <div class="drop-arrow">&#9660;</div>
+            <button class="nav-dropbtn">My Stuff <span class="drop-arrow">&#9660;</span>
             </button>
 
             <!-- The drop down menu for collections -->
@@ -47,7 +47,7 @@
           
           <!-- Dropdown for the creation tools -->
           <div class="nav-dropdown" id="content">
-            <button class="nav-dropbtn">Creation Tools <div class="drop-arrow">&#9660;</div>
+            <button class="nav-dropbtn">Creation Tools <span class="drop-arrow">&#9660;</span>
             </button>
 
             <!-- The drop down menu for creation tools -->
@@ -68,7 +68,7 @@
           
           <!-- Dropdown for the store -->
           <div class="nav-dropdown" id="content">
-            <button class="nav-dropbtn">Store <div class="drop-arrow">&#9660;</div>
+            <button class="nav-dropbtn">Store <span class="drop-arrow">&#9660;</span>
             </button>
 
             <!-- The drop down menu for store -->
@@ -84,14 +84,29 @@
           
         </div>
         <div class="simple-nav" id="mini-nav" style="display: none;">
-              <a href="/html/classes/mae-302/unit1/unit1.html"><em>Gas power cycles</em></a>
-              <a href="/html/classes/mae-302/unit2/unit2.html"><em>Steam power cycles</em></a>
-              <a href="/html/classes/mae-302/unit3/unit3.html"><em>Refrigeration cycles</em></a>
-              <a href="/html/classes/mae-302/unit4/unit4.html"><em>Ideal gas mixtures and psychrometrics</em></a>
-              <a href="/html/classes/mae-302/unit5/unit5.html"><em>Combustion processes</em></a>
-              <a href="/html/classes/mae-302/unit6/unit6.html"><em>Chemical equilibrium</em></a>
-              <a href="/html/classes/mae-302/unit7/unit7.html"><em>Ideal compressible flow</em></a>
-              <a href="/html/classes/mae-302/unit8/unit8.html"><em>Review and tests</em></a>
+              <a onclick="toggleSub('my-stuff')">My Stuff</a>
+              <div id="my-stuff" style="display: none;" class="simple-dropdown">
+              	<a href="">Campaigns</a>
+              	<a href="">Maps</a>
+              	<a href="">Libraries</a>
+              	<a href="">Dice</a>
+              </div>
+              <a onclick="toggleSub('create')">Creation Tools</a>
+              <div id="create" style="display: none;" class="simple-dropdown">
+              	<a href="">Character Creator</a>
+              	<a href="">Map Creator</a>
+              	<a href="">Homebrew Creator</a>
+              	<a href="">Sound Creator</a>
+              </div>
+              <a href="/html/classes/mae-302/unit3/unit3.html">Rule and Guides</a>
+              <a href="/html/classes/mae-302/unit4/unit4.html">Forums</a>
+              <a onclick="toggleSub('store')">Store</a>
+              <div id="store" style="display: none;" class="simple-dropdown">
+              	<a href="">Featured</a>
+              	<a href="">Trending</a>
+              	<a href="">Browse</a>
+              	<a href="">My Purchases</a>
+              </div>
        </div>
       </div>
       
@@ -157,6 +172,15 @@
 				  iterations: 1,
 				}
 		x.animate(hudHide, timing);
+	}
+	
+	function toggleSub(id) {
+		var x = document.getElementById(id);
+		if (x.style.display === "none") {
+			x.style.display = null;
+		} else {
+			x.style.display = "none";
+		}
 	}
 </script>
 </html>

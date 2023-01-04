@@ -18,6 +18,7 @@
  	--trim-color: gold;
  	--disabled-filter: invert(80%) sepia(0%) saturate(3%) hue-rotate(206deg) brightness(82%) contrast(86%);
  	--active-filter: invert(98%) sepia(6%) saturate(344%) hue-rotate(222deg) brightness(116%) contrast(91%);
+ 	--functional-font: tahoma;
 }
 
 html {
@@ -38,7 +39,7 @@ div.top-flavor {
 	background-image: linear-gradient(to bottom right, var(--active-color), var(--darker-active-color));
 	box-sizing: border-box;
 	border-bottom: 3px solid var(--trim-color);
-	overflow: none;
+	overflow: hidden;
 }
 
 .home-logo {
@@ -55,7 +56,6 @@ div.top-flavor {
 .top-nav-right {
 	float: right;
 	color: var(--active-text-color);
-	font-family: Luminari;
 	font-size: 22px;
 	text-decoration: none;
 	padding: 15px 5px 15px 5px;
@@ -105,7 +105,7 @@ div.top-flavor {
 }
 
 .navbar {
-	font-family: tahoma;
+	font-family: var(--functional-font);
     overflow: hidden;
     z-index: 1;
     top: 0;
@@ -247,26 +247,29 @@ div.top-flavor {
     z-index: 999;
     width: 350px;
     float: right;
+    max-height: 580px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background: var(--darker-active-color);
+    overflow: auto;
 }
 
 .simple-nav a {
-    font-family: georgia;
+    font-family: var(--functional-font);
     color: var(--diabled-text-color);
     height: 50px;
-    line-height: 50px;
+    line-height: 48px;
     font-size: 16px;
     text-align: left;
     padding-left: 15px;
     text-decoration: none;
-    overflow: auto;
+    overflow: hidden;
     float: none;
     display: block;
     box-sizing: border-box;
-	border-bottom: 1px solid var(--active-color);
+	border-bottom: 2px solid var(--darker-active-color);
 	/** Transition */
 	background-size: 200% 100%;
-    background-image: linear-gradient(to right, var(--lighter-active-color) 50%, var(--active-color) 50%);
+    background-image: linear-gradient(to right, var(--active-color) 50%, var(--darker-active-color) 50%);
     -webkit-transition: background-position .4s;
     -moz-transition: background-position .4s;
     transition: background-position .4s;
@@ -275,6 +278,19 @@ div.top-flavor {
 .simple-nav a:hover {
 	background-position: 100%;
     color: var(--active-text-color);
+}
+
+.simple-dropdown a {
+	background-image: linear-gradient(to right, var(--lighter-active-color) 50%, var(--darker-active-color) 50%);
+	padding-left: 50px;
+}
+
+.simple-drop-arrow {
+	float: right;
+	font-size: 8px;
+    line-height: 50px;
+    padding-left: 6px;
+    text-align: center;
 }
 
 /* Use a media query to modify for phones */
@@ -311,5 +327,7 @@ div.top-flavor {
 }
 
 @media screen and (min-width: 768px) {
-  
+  	.simple-nav {
+  		display: none;
+  	}
 }
