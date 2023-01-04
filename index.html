@@ -12,7 +12,7 @@
 	<div class="top-flavor">
 	<div class="margin-left"></div>
 		<!-- Home button -->
-		<a class="home-logo" href="/index.html"><img
+		<a class="home-logo" href="/index.html" title="Home"><img
 			src="assets/d20-logo.jpg" class="home-icon" alt="D20-logo">Dungeon
 			Connect</a>
 		<!-- Right Margin -->
@@ -20,10 +20,10 @@
 		<!-- Profile Dropdown -->
 		
 		<!-- Messages -->
-		<a class="top-nav-right" href="index.html"><img src="assets/messages-icon.jpg" class="nav-icon" alt="messages"></a>
+		<a class="top-nav-right" href="index.html" title="Messages"><img src="assets/messages-icon.jpg" class="nav-icon" alt="messages"></a>
 		<!-- Notifications -->
 		<!-- Hide/Show Nav -->
-		<div class="top-nav-right" onclick="toggleNav('nav', 'mini-nav')"><img src="assets/nav-icon.jpg" class="nav-icon" alt="menu"></div>
+		<div class="top-nav-right" title="Toggle Navigation Bar" onclick="toggleNav('nav', 'mini-nav')"><img src="assets/nav-icon.jpg" class="nav-icon" alt="menu"></div>
 		<!-- Search -->
 	</div>
 	
@@ -37,6 +37,11 @@
 
             <!-- The drop down menu for collections -->
             <div class="nav-dropdown-content">
+            	<div class="nav-dropdown-background"></div>
+            	<a href="/my-stuff/campaigns.html"><span class="menu-label">Campaigns</span></a>
+              	<a href="/my-stuff/maps.html"><span class="menu-label">Maps</span></a>
+              	<a href="/my-stuff/libraries.html"><span class="menu-label">Libraries</span></a>
+              	<a href="/my-stuff/dice.html"><span class="menu-label">Dice</span></a>
             </div>
           </div>
           
@@ -47,15 +52,19 @@
 
             <!-- The drop down menu for creation tools -->
             <div class="nav-dropdown-content">
-            <div class="nav-dropdown-background"></div>
+            	<div class="nav-dropdown-background"></div>
+            	<a href="/create/campaigns.html"><span class="menu-label">Character Creator</span></a>
+              	<a href="/create/maps.html"><span class="menu-label">Map Creator</span></a>
+              	<a href="/create/homebrew.html"><span class="menu-label">Homebrew Creator</span></a>
+              	<a href="/create/dice.html"><span class="menu-label">Sound Creator</span></a>
             </div>
           </div>
 
           <!-- Rules and Guides -->
-          <a href="/rules-and-guides/rules-home.html">Rules and Guides</a>
+          <a href="/rules-and-guides/rules-home.html" class="nav-button">Rules and Guides</a>
 
           <!-- Forums -->
-          <a href="/forums/forum-home.html">Forums</a>
+          <a href="/forums/forum-home.html" class="nav-button">Forums</a>
           
           <!-- Dropdown for the store -->
           <div class="nav-dropdown" id="content">
@@ -64,14 +73,11 @@
 
             <!-- The drop down menu for store -->
             <div class="nav-dropdown-content">
-            <a href="/html/classes/mae-302/unit1/unit1.html"><em>Gas power cycles</em></a>
-              <a href="/html/classes/mae-302/unit2/unit2.html"><em>Steam power cycles</em></a>
-              <a href="/html/classes/mae-302/unit3/unit3.html"><em>Refrigeration cycles</em></a>
-              <a href="/html/classes/mae-302/unit4/unit4.html"><em>Ideal gas mixtures and psychrometrics</em></a>
-              <a href="/html/classes/mae-302/unit5/unit5.html"><em>Combustion processes</em></a>
-              <a href="/html/classes/mae-302/unit6/unit6.html"><em>Chemical equilibrium</em></a>
-              <a href="/html/classes/mae-302/unit7/unit7.html"><em>Ideal compressible flow</em></a>
-              <a href="/html/classes/mae-302/unit8/unit8.html"><em>Review and tests</em></a>
+            	<div class="nav-dropdown-background"></div>
+            	<a href="/store/featured.html"><span class="menu-label">Featured</span></a>
+              	<a href="/store/trending.html"><span class="menu-label">Trending</span></a>
+              	<a href="/store/browse.html"><span class="menu-label">Browse</span></a>
+              	<a href="/store/purchases.html"><span class="menu-label">My Purchases</span></a>
             </div>
           </div>
 

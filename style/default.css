@@ -112,7 +112,7 @@ div.top-flavor {
     margin: auto;
 }
 
-.navbar a {
+.nav-button {
     float: left;
     font-size: 16px;
     line-height: 20px;
@@ -153,7 +153,7 @@ div.top-flavor {
     transition: background-position .4s;
 }
 
-.navbar a:hover, .nav-dropdown:hover .nav-dropbtn {
+.nav-button:hover, .nav-dropdown:hover .nav-dropbtn {
     background-position: 0 100%;
     color: var(--active-text-color);
 }
@@ -164,25 +164,69 @@ div.top-flavor {
     left: 10%;
     z-index: 999;
     width: 80%;
-    height: 300px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     box-sizing: border-box;
     border-bottom: 3px solid var(--trim-color);
     border-left: 3px solid var(--trim-color);
     border-right: 3px solid var(--trim-color);
+    justify-content: space-evenly;
+}
+
+.nav-dropdown-content a {
+	float: left;
+    color: var(--diabled-text-color);
+    text-align: center;
+    text-decoration: none;
+	position: relative;
+	z-index: 999;
+	width: 20%;
+	aspect-ratio:7/5;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	overflow: hidden;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+	/** Animation */
+	border: 0px solid var(--trim-color);
+  	transition: 0.2s
+}
+
+.menu-label {
+	font-size: 16px;
+    line-height: 20px;
+	background-color: rgba(0,0,0,0.6);
+	padding: 10px;
+	position: absolute;
+	top: calc(100% - 40px);
+	left: 0px;
+	transition: .4s;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.nav-dropdown-content a:hover > .menu-label {
+	top: 0px;
+	color: var(--active-text-color);
+}
+
+.nav-dropdown-content a:hover {
+	border: 2px solid var(--trim-color);
 }
 
 .nav-dropdown-background {
 	background-color: var(--active-color);
 	position: absolute;
+	z-index: 998;
 	opacity: .99;
 	width: 100%;
 	height: 100%;
 }
 
 .nav-dropdown:hover .nav-dropdown-content {
-    display: block;
+    display: flex;
 }
 
 .simple-nav {
@@ -242,12 +286,16 @@ div.top-flavor {
 
 /* Use a media query to modify for tablets */
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-	
+	.menu-label {
+		font-size: 12px;
+		line-height: 14px;
+		background-color: rgba(0, 0, 0, 0.6);
+		padding: 8px;
+		position: absolute;
+		top: calc(100% - 30px);
+	}
 }
 
 @media screen and (min-width: 768px) {
-  .simple-nav {
-  	display: none;
-  }
   
 }
