@@ -23,7 +23,7 @@
 		<a class="top-nav-right" href="index.html"><img src="assets/messages-icon.jpg" class="nav-icon" alt="messages"></a>
 		<!-- Notifications -->
 		<!-- Hide/Show Nav -->
-		<div class="top-nav-right" onclick="toggleNav('nav')"><img src="assets/nav-icon.jpg" class="nav-icon" alt="menu"></div>
+		<div class="top-nav-right" onclick="toggleNav('nav', 'mini-nav')"><img src="assets/nav-icon.jpg" class="nav-icon" alt="menu"></div>
 		<!-- Search -->
 	</div>
 	
@@ -64,28 +64,54 @@
 
             <!-- The drop down menu for store -->
             <div class="nav-dropdown-content">
+            <a href="/html/classes/mae-302/unit1/unit1.html"><em>Gas power cycles</em></a>
+              <a href="/html/classes/mae-302/unit2/unit2.html"><em>Steam power cycles</em></a>
+              <a href="/html/classes/mae-302/unit3/unit3.html"><em>Refrigeration cycles</em></a>
+              <a href="/html/classes/mae-302/unit4/unit4.html"><em>Ideal gas mixtures and psychrometrics</em></a>
+              <a href="/html/classes/mae-302/unit5/unit5.html"><em>Combustion processes</em></a>
+              <a href="/html/classes/mae-302/unit6/unit6.html"><em>Chemical equilibrium</em></a>
+              <a href="/html/classes/mae-302/unit7/unit7.html"><em>Ideal compressible flow</em></a>
+              <a href="/html/classes/mae-302/unit8/unit8.html"><em>Review and tests</em></a>
             </div>
           </div>
 
           
         </div>
+        <div class="simple-nav" id="mini-nav" style="display: none;">
+              <a href="/html/classes/mae-302/unit1/unit1.html"><em>Gas power cycles</em></a>
+              <a href="/html/classes/mae-302/unit2/unit2.html"><em>Steam power cycles</em></a>
+              <a href="/html/classes/mae-302/unit3/unit3.html"><em>Refrigeration cycles</em></a>
+              <a href="/html/classes/mae-302/unit4/unit4.html"><em>Ideal gas mixtures and psychrometrics</em></a>
+              <a href="/html/classes/mae-302/unit5/unit5.html"><em>Combustion processes</em></a>
+              <a href="/html/classes/mae-302/unit6/unit6.html"><em>Chemical equilibrium</em></a>
+              <a href="/html/classes/mae-302/unit7/unit7.html"><em>Ideal compressible flow</em></a>
+              <a href="/html/classes/mae-302/unit8/unit8.html"><em>Review and tests</em></a>
+       </div>
       </div>
       
 	<div style="background: black; height: 10000px; width: 5%"></div>
 </body>
 <script type="text/javascript">
-	function toggleNav(id) {
+	
+	function toggleNav(id, id2) {
 		var x = document.getElementById(id);
-		const mediaQuery = window.matchMedia('(max-width: 767px)');
-		if (mediaQuery) {
+		var y = document.getElementById(id2);
+		const notPhone = window.matchMedia('(min-width: 768px)');
+		const phone = window.matchMedia('(max-width: 767px)');
+		if (notPhone.matches) {
 			if (x.style.display === "none") {
 				x.style.display = null;
 			} else {
 				x.style.display = "none";
 			}
+			console.log("If executed.")
 		}
 		else {
-			// Code that brings out the hidden nav bar for smaller screens
+			if (y.style.display === "none") {
+				y.style.display = null;
+			} else {
+				y.style.display = "none";
+			}
 		}
 	}
 </script>
