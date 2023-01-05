@@ -207,6 +207,11 @@ div.top-flavor {
   	transition: 0.2s
 }
 
+a.small-menu {
+	width: 15%;
+	aspect-ratio:7/5;
+}
+
 .menu-label {
 	font-size: 16px;
     line-height: 20px;
@@ -309,6 +314,10 @@ div.top-flavor {
   
   .home-logo {
   	margin-left: 0px;
+  }
+  
+  a.top-nav-right {
+  	display:none;
   }
   
   
