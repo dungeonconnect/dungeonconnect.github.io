@@ -262,8 +262,8 @@ a.small-menu {
     font-family: var(--functional-font);
     color: var(--diabled-text-color);
     height: 50px;
-    line-height: 48px;
     font-size: 16px;
+    line-height: 48px;
     text-align: left;
     padding-left: 15px;
     text-decoration: none;
@@ -278,6 +278,13 @@ a.small-menu {
     -webkit-transition: background-position .4s;
     -moz-transition: background-position .4s;
     transition: background-position .4s;
+}
+
+span.simple-arrow {
+	line-height: 48px;
+    font-size: 8px;
+    position: relative;
+    top: -3px;
 }
 
 .simple-nav a:hover {
