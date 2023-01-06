@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body {
+	background-image: url("../assets/papyrus-background.jpg");
+	margin: 0px;
+	width: 100%;
+	min-height: 100%;
+}
+
+/* Use a media query to modify for phones */
+@media screen and (max-width: 767px) {
+}
+
+/* Use a media query to modify for tablets */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+}
+
+@media screen and (min-width: 768px) {
+}

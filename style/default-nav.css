@@ -23,11 +23,12 @@
 
 html {
 	min-height: 100%;
+	width: 100%;
 }
 
-body {
-	background-image: url("../assets/papyrus-background.jpg");
-	margin: 0px;
+.content {
+	width: 80%;
+	color: red;
 }
 
 div.top-flavor {
@@ -85,20 +86,21 @@ div.top-flavor {
 	filter: var(--disabled-filter) drop-shadow(2px 2px 4px black);
 }
 
-.margin-left {
+.nav-margin-left {
 	float: left;
 	width: 10%;
 	height: 100%;
 }
 
-.margin-right {
+.nav-margin-right {
 	float: right;
 	width: 10%;
 	height: 100%;
 }
 
 .hud {
-    position: fixed;
+    position: -webkit-sticky; /* Safari */
+  	position: sticky;
     width: 100%;
     z-index: 999;
     top: 0px;
@@ -307,11 +309,11 @@ span.simple-arrow {
 
 /* Use a media query to modify for phones */
 @media screen and (max-width: 767px) {
-  .margin-left {
+  .nav-margin-left {
     width: 10px;
   }
   
-  .margin-right {
+  .nav-margin-right {
     width: 10px;
   }
   
