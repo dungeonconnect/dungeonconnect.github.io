@@ -1,13 +1,14 @@
 @charset "UTF-8";
 
 body {
-	width: 100%;
+	background-image: url("../assets/papyrus-background.jpg");
+	margin: 0px;
+	overflow-wrap: break-word;
 	min-height: 100%;
 }
 
 html {
 	min-height: 100%;
-	width: 100%;
 }
 
 /* Use a media query to modify for phones */
