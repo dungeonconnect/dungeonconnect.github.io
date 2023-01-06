@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Testing Site for Pages</title>
+<script type = "text/javascript" src="nav/nav-animate.js"></script> <!-- For the js navbar -->
+<link href="style/default-nav.css" rel="stylesheet" type="text/css" /> <!-- Style sheet for nav -->
+<link href="style/default-page.css" rel="stylesheet" type="text/css" /> <!-- Style sheet -->
+</head>
+<body>
+<div class="hud"> <!-- Recommend Closing this as this is purely the nav stuff -->
+	<!-- Logo and beginning of the page -->
+	<div class="top-flavor">
+	<div class="nav-margin-left"></div>
+		<!-- Home button -->
+		<a class="home-logo" href="index.html" title="Home"><img
+			src="assets/d20-logo.jpg" class="home-icon" alt="D20-logo">Dungeon
+			Connect</a>
+		<!-- Right Margin -->
+		<div class="nav-margin-right"></div>
+		<!-- Profile Dropdown -->
+		
+		<!-- Messages -->
+		<a class="top-nav-right" href="profile/messages" title="Messages"><img src="assets/messages-icon.jpg" class="nav-icon" alt="messages"></a>
+		<!-- Notifications -->
+		<a class="top-nav-right" href="profile/notifications" title="Notifications"><img src="assets/notifications-icon.jpg" class="nav-icon" alt="notifications"></a>
+		<!-- Hide/Show Nav -->
+		<div class="top-nav-right" title="Toggle Navigation Bar" onclick="toggleNav('nav', 'mini-nav', 'nav-space')"><img src="assets/nav-icon.jpg" class="nav-icon" alt="menu"></div>
+		<!-- Search -->
+	</div>
+	
+	<!-- Navbar for the page -->
+        <div class="navbar" id="nav">
+
+          <!-- Dropdown for the user's collections -->
+          <div class="nav-dropdown" id="content">
+            <button class="nav-dropbtn">My Stuff <span class="drop-arrow">&#9660;</span>
+            </button>
+
+            <!-- The drop down menu for collections -->
+            <div class="nav-dropdown-content">
+            	<div class="nav-dropdown-background"></div>
+            	<a href="my-stuff/characters.html"><span class="menu-label">Characters</span></a>
+            	<a href="my-stuff/campaigns.html"><span class="menu-label">Campaigns</span></a>
+              	<a href="my-stuff/maps.html"><span class="menu-label">Maps</span></a>
+              	<a href="my-stuff/libraries.html"><span class="menu-label">Libraries</span></a>
+            </div>
+          </div>
+          
+          <!-- Dropdown for the creation tools -->
+          <div class="nav-dropdown" id="content">
+            <button class="nav-dropbtn">Creation Tools <span class="drop-arrow">&#9660;</span>
+            </button>
+
+            <!-- The drop down menu for creation tools -->
+            <div class="nav-dropdown-content">
+            	<div class="nav-dropdown-background"></div>
+            	<a href="create/characters.html"><span class="menu-label">Character Creator</span></a>
+              	<a href="create/maps.html"><span class="menu-label">Map Creator</span></a>
+              	<a href="create/homebrew.html"><span class="menu-label">Homebrew Creator</span></a>
+              	<a href="create/sounds.html"><span class="menu-label">Sound Creator</span></a>
+            </div>
+          </div>
+
+          <!-- Rules and Guides -->
+          <a href="rules-and-guides/rules-home.html" class="nav-button">Rules and Guides</a>
+
+          <!-- Forums -->
+          <a href="forums/forum-home.html" class="nav-button">Forums</a>
+          
+          <!-- Dropdown for the store -->
+          <div class="nav-dropdown" id="content">
+            <button class="nav-dropbtn">Store <span class="drop-arrow">&#9660;</span>
+            </button>
+
+            <!-- The drop down menu for store -->
+            <div class="nav-dropdown-content">
+            	<div class="nav-dropdown-background"></div>
+            	<a href="store/featured.html"><span class="menu-label">Featured</span></a>
+              	<a href="store/trending.html"><span class="menu-label">Trending</span></a>
+              	<a href="store/browse.html"><span class="menu-label">Browse</span></a>
+              	<a href="store/purchases.html"><span class="menu-label">My Purchases</span></a>
+            </div>
+          </div>
+
+          
+        </div>
+        <div class="simple-nav" id="mini-nav" style="display: none;">
+        	  <a onclick="toggleSub('profile')">Profile <span class="simple-arrow">&#9660;</span></a>
+              <div id="profile" style="display: none;" class="simple-dropdown">
+              	<a href="profile/notifications.html">Notifications</a>
+              	<a href="profile/messages.html">Messages</a>
+              </div>
+              <a onclick="toggleSub('my-stuff')">My Stuff <span class="simple-arrow">&#9660;</span></a>
+              <div id="my-stuff" style="display: none;" class="simple-dropdown">
+              	<a href="my-stuff/characters.html">Characters</a>
+              	<a href="my-stuff/campaigns.html">Campaigns</a>
+              	<a href="my-stuff/maps.html">Maps</a>
+              	<a href="my-stuff/libraries.html">Libraries</a>
+              </div>
+              <a onclick="toggleSub('create')">Creation Tools <span class="simple-arrow">&#9660;</span></a>
+              <div id="create" style="display: none;" class="simple-dropdown">
+              	<a href="create/characters.html">Character Creator</a>
+              	<a href="create/maps.html">Map Creator</a>
+              	<a href="create/homebrew.html">Homebrew Creator</a>
+              	<a href="create/sounds.html">Sound Creator</a>
+              </div>
+              <a href="html/classes/mae-302/unit3/unit3.html">Rule and Guides</a>
+              <a href="html/classes/mae-302/unit4/unit4.html">Forums</a>
+              <a onclick="toggleSub('store')">Store <span class="simple-arrow">&#9660;</span></a>
+              <div id="store" style="display: none;" class="simple-dropdown">
+              	<a href="store/featured.html">Featured</a>
+              	<a href="store/trending.html">Trending</a>
+              	<a href="store/browse.html">Browse</a>
+              	<a href="store/purchases.html">My Purchases</a>
+              </div>
+       </div>
+      </div>
+      <div class="flavor-space"></div>
+      <div class="nav-space" id="nav-space"></div>
+
+<!-- Test crap here -->
+<div class="page-content">
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+</div>
+</body>
+</html>

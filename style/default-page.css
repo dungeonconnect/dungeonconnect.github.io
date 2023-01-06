@@ -11,8 +11,21 @@ html {
 	min-height: 100%;
 }
 
+div.page-content {
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+	box-sizing: border-box;
+}
+
 /* Use a media query to modify for phones */
 @media screen and (max-width: 767px) {
+	div.page-content {
+		margin-left: 5%;
+		margin-right: 5%;
+		width: 90%;
+		box-sizing: border-box;
+	}
 }
 
 /* Use a media query to modify for tablets */

@@ -93,11 +93,28 @@ div.top-flavor {
 }
 
 .hud {
-    position: -webkit-sticky; /* Safari */
-  	position: sticky;
+    position: fixed;
     width: 100%;
     z-index: 999;
     top: 0px;
+}
+
+.flavor-space {
+	position: -webkit-sticky; /* Safari */
+  	position: sticky;
+    width: 100%;
+    z-index: 20;
+    top: 0px;
+    height: 63px;
+}
+
+.nav-space {
+	position: -webkit-sticky; /* Safari */
+  	position: sticky;
+    width: 100%;
+    z-index: 20;
+    top: 0px;
+    height: 50px;
 }
 
 .navbar {
@@ -321,6 +338,10 @@ span.simple-arrow {
   
   a.top-nav-right {
   	display:none;
+  }
+  
+  .nav-space {
+  	display: none;
   }
   
   
