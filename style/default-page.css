@@ -41,13 +41,13 @@ div.page-content {
 	float: left;
 	border-radius: 5px;
 	box-sizing: border-box;
-	color: var(--active-text-color);
-	font-family: var(--functional-font);
+	color: var(--normal-text-color);
+	font-family: var(--normal-text-font);
 	text-decoration: none;
 	padding-left: 100px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	filter: drop-shadow(2px 2px 4px rgba(0,0,0,.8));
+	filter: drop-shadow(2px 2px 4px rgba(0,0,0,.6));
 	margin-top: 20px;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -56,7 +56,7 @@ div.page-content {
 	
 	/** animation */
 	background-size: 100% 200%;
-    background-image: linear-gradient(to bottom, var(--lighter-active-color) 50%, var(--active-color) 50%);
+    background-image: linear-gradient(to bottom, var(--active-text-color) 50%, white 50%);
     -webkit-transition: .4s;
     -moz-transition: .4s;
     transition: .4s;
@@ -77,7 +77,7 @@ div.page-content {
 	color: var(--active-text-color);
 	font-family: var(--functional-font);
 	text-decoration: none;
-	filter: drop-shadow(2px 2px 4px rgba(0,0,0,.8));
+	filter: drop-shadow(2px 2px 4px rgba(0,0,0,.6));
 	margin-top: 20px;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -107,7 +107,7 @@ div.page-content {
 	-ms-transform: translate(0%, -50%);
   	transform: translate(0%, -50%);
   	border-radius: 3px;
-  	filter: drop-shadow(2px 2px 4px rgba(0,0,0,.8));
+  	filter: drop-shadow(2px 2px 4px rgba(0,0,0,.4));
 }
 
 .menu-character-info {
@@ -128,6 +128,7 @@ span.menu-char-title {
 
 span.menu-char-description {
 	font-size: 14px;
+	font-style: italic;
 }
 
 /* Use a media query to modify for phones */
